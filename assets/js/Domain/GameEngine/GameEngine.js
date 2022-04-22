@@ -318,10 +318,19 @@ GameEngine = {
 
     },
 	
-    eatLeaflet: () => {
+    eatAction: (item) => {
 	
-	if (!GameEngine.player.getPlayerInventory().includes("leaflet")) {
+	let lItem = item.toLowerCase();
+        let itemObject = itemObjects[lItem];
+
+        if (!GameEngine.player.inventory.includes(lItem))
+        {
+            GameEngine.cli.output(GameEngine.outputList.notEatable);
+            return;
+        } else {
+	    if ( lItem == "leaflet") {
 		GameEngine.cli.output("I don't think the leaflet would appreciate that!");
+	}
     },
 
     outputList: {
@@ -338,7 +347,8 @@ GameEngine = {
         notOpenable: "You can't open that.",
         notUseable: "Use what?",
         alreadyInUse: "The item is already in use. Putting item away.",
-        notReadable: "You can't read that."
+        notReadable: "You can't read that.",
+	notEatable: "You can't eat that."
     },
 
 }
