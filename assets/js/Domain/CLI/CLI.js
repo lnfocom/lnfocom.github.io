@@ -20,12 +20,15 @@ class CLI
             "USE", "NORTH", "EAST", "SOUTH", "WEST", "MAILBOX",
             "UP", "DOWN", "LEFT", "RIGHT", "SAVE", "RESET",
             "HELP", "STATE", "BRIEF", "VERBOSE", "READ",
-            "CLIMB", "UP", "DOWN","EAT LEAFLET",
+            "CLIMB", "UP", "DOWN","EAT",
         ];
         this.openableInstances = [
             "WINDOW", "DOOR", "TRAPDOOR", "TRAP", "TREE", "KITCHEN",
             "CHIMNEY",
         ];
+	this.eatableInstances = [
+	    "LEAFLET",
+	];
     }
 
     /**
@@ -154,7 +157,7 @@ class CLI
             "RESET":      GameEngine.resetGame,
             "BRIEF":      GameEngine.setBriefOutput,
             "VERBOSE":    GameEngine.setVerboseOutput,
-	    "EAT LEAFLET": GameEngine.eatLeaflet,
+	    "EAT": GameEngine.eatAction,
         }
     
         if ( ["NORTH", "SOUTH", "EAST", "WEST", "BACK", "CLIMB", "ENTER", "UP", "DOWN"].includes(cmd) ) {
