@@ -348,7 +348,7 @@ GameEngine = {
         notUseable: "Use what?",
         alreadyInUse: "The item is already in use. Putting item away.",
         notReadable: "You can't read that.",
-	notEatable: "You can't eat that."
+	notEatable: "You can't eat that.",
     },
 
 }
