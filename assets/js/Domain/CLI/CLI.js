@@ -20,7 +20,7 @@ class CLI
             "USE", "NORTH", "EAST", "SOUTH", "WEST", "MAILBOX",
             "UP", "DOWN", "LEFT", "RIGHT", "SAVE", "RESET",
             "HELP", "STATE", "BRIEF", "VERBOSE", "READ",
-            "CLIMB", "UP", "DOWN","EAT",
+            "CLIMB", "UP", "DOWN", "EAT",
         ];
         this.openableInstances = [
             "WINDOW", "DOOR", "TRAPDOOR", "TRAP", "TREE", "KITCHEN",
