@@ -320,15 +320,18 @@ GameEngine = {
 	
     eatAction: (item) => {
 	
+	if ( !item ) {
+		GameEngine.cli.output(GameEngine.outputList.notEatable);
+	}
+	
 	let lItem = item.toLowerCase();
         let itemObject = itemObjects[lItem];
 
-        if (!GameEngine.player.inventory.includes(lItem))
-        {
+        if (!GameEngine.player.getPLayerInventory().includes(lItem)) {
             GameEngine.cli.output(GameEngine.outputList.notEatable);
             return;
         } else {
-	    if ( lItem == "leaflet") {
+	    if ( lItem == "leaflet" ) {
 		GameEngine.cli.output("I don't think the leaflet would appreciate that!");
 	}
     },
