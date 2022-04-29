@@ -333,6 +333,7 @@ GameEngine = {
         } else {
 	    if ( lItem == "leaflet" ) {
 		GameEngine.cli.output("I don't think the leaflet would appreciate that!");
+	    }
 	}
     },
 
